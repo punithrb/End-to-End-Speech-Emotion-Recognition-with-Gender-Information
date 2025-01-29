@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>memorial books</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="stylesheet" href="static/css/bootstrap.min.css">
+      <link rel="stylesheet" href="static/css/style.css">
+      <link rel="stylesheet" href="static/css/responsive.css">
+      <link rel="icon" href="static/images/fevicon.png" type="image/gif" />
+      <link rel="stylesheet" href="static/css/jquery.mCustomScrollbar.min.css">
+   </head>
+   <body style="background-color: #41B3A3;" class="main-layout contact-page">
+      <div class="loader_bg">
+         <div class="loader"><img src="static/images/loading.gif" alt="#" /></div>
+      </div>
+
+
+      <header>
+         <div class="header">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <div class="menu-area">
+                        <div class="limit-box">
+                           <nav class="main-menu">
+                              <ul class="menu-area-main">
+                                 <li> <a href="{{ url_for('home') }}">Home</a> </li>
+                                 <li> <a href="{{ url_for('about') }}">About us</a> </li>
+                                 {% if session['loggedin'] %}
+                                    <li><a href="{{ url_for('application') }}">Application</a></li>
+                                 {% endif %}
+                                 <li class="active"><a href="{{ url_for('contact') }}">Contact us</a></li>
+                                 {% if session['loggedin'] %}
+                                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                                 {% else %}
+                                    <li><a href="{{ url_for('login') }}">Log In</a></li>
+                                 {% endif %}
+                              </ul>
+                           </nav>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         </div>
+         <!-- end header inner -->
+      </header>
+      <!-- end header -->
+      <div class="about-bg">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                  <div class="abouttitle">
+                     <h2>Contact Us</h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Contact -->
+        <center>
+        {% if message %}
+         <H3>{{message}}</H3>
+        {% endif %}
+    </center>
+      <div class="Contact">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                  <form action="{{url_for('contact')}}" method="post">
+                     <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <input class="form-control" placeholder="Name" name="name" type="text">
+                        </div>
+                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <input class="form-control" placeholder="Email" name="email" type="email" required>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <input class="form-control" placeholder="Phone Number" name="phone_nu" type="text">
+                        </div>
+                       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <input class="form-control" placeholder="Subject" name="subject" type="text">
+                        </div>
+                        <div class="col-sm-12">
+                           <textarea class="textarea" name="message" placeholder="Message" required>Message</textarea>
+                        </div>
+                        <button type="submit" class="send-btn">Send</button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <script src="static/js/jquery.min.js"></script>
+      <script src="static/js/popper.min.js"></script>
+      <script src="static/js/bootstrap.bundle.min.js"></script>
+      <script src="static/js/jquery-3.0.0.min.js"></script>
+      <script src="static/js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="static/js/custom.js"></script>
+   </body>
+</html>
