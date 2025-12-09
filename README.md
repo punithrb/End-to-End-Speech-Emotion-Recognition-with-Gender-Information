@@ -24,18 +24,7 @@ Integrating gender increases recognition accuracy and robustness across datasets
 
 ---
 
-## 📁 Repository Structure
 
-```
-End-to-End-Speech-Emotion-Recognition-with-Gender-Information/
-├── data/                # datasets (not included)
-├── src/                 # training, inference & model code
-├── models/              # saved weights
-├── requirements.txt 
-└── README.md
-```
-
----
 
 ## 🧰 Requirements
 
