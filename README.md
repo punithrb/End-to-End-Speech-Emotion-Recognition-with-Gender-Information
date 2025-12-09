@@ -21,13 +21,6 @@ Unlike feature-engineered systems that rely on MFCC, pitch & spectral features, 
 Studies show that the **fundamental frequency, formants & emotional tone differ across male and female voices**.  
 Integrating gender increases recognition accuracy and robustness across datasets.
 
-Performance improvements (as referenced):
-
-| Dataset | Accuracy Gain |
-|--------|---------------|
-| Mandarin | + ~5.6% |
-| English | + ~7.3% |
-| German  | + ~1.5% |
 
 ---
 
